@@ -26,7 +26,7 @@ To write a program to find the solution of a matrix using Gaussian Elimination.
 
 9. Back-substitute from last row to first using x[i] = (a[i][n] - Σ a[i][j]*x[j]) / a[i][i]
 
-10. Print solution vector x using a loop and formatted print() •
+10. Print solution vector x using a loop and formatted print() 
 
 ## Program:
 ``` python
