@@ -16,7 +16,7 @@ To write a program to find the solution of a matrix using Gaussian Elimination.
 
 4. Initialize a solution vector x of size n using np.zeros() .
 
-5. Take user input for all coefficients and constants into matrix a using nested for loops and input() •
+5. Take user input for all coefficients and constants into matrix a using nested for loops and input() 
 
 6. For each row i, ensure diagonal element a[i][i] is not zero to avoid division by zero.
 
