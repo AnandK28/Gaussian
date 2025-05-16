@@ -8,25 +8,20 @@ To write a program to find the solution of a matrix using Gaussian Elimination.
 2. Anaconda – Python 3.7 Installation / Moodle-Code Runner
 
 ## Algorithm
-1. Import NumPy as np for matrix operations.
-
-2. Input number of variables n using input() and convert to integer.
-
-3. Initialize an n x (n+1) augmented matrix a using np.zeros () .
-
-4. Initialize a solution vector x of size n using np.zeros() .
-
-5. Take user input for all coefficients and constants into matrix a using nested for loops and input() •
-
-6. For each row i, ensure diagonal element a[i][i] is not zero to avoid division by zero.
-
-7. For rows below i, eliminate variable by computing ratio - a[jl[i] / a[il[i].
-
-8. Subtract ratio * a[i][k] from a[j][k] for each column to form upper triangular matrix.
-
-9. Back-substitute from last row to first using x[i] = (a[i][n] - E a[i][il*[jl) / a[i][i].
-
-10. Print solution vector x using a loop and formatted print() •
+```text
+1. Import NumPy as `np` for matrix operations.
+2. Input number of variables `n` using `input()` and convert it using `int()`.
+3. Initialize an `n x (n+1)` augmented matrix `a` using `np.zeros((n, n+1))`.
+4. Initialize a solution vector `x` of size `n` using `np.zeros(n)`.
+5. Populate the augmented matrix `a[i][j]` with user input using nested `for` loops and `input()`.
+6. For each row `i`, check if diagonal element `a[i][i] == 0` to avoid division by zero.
+7. For rows `j > i`, compute elimination factor `ratio = a[j][i] / a[i][i]`.
+8. Update row `j` using `a[j][k] = a[j][k] - ratio * a[i][k]` for all columns `k`.
+9. Perform back substitution:
+   Set `x[n-1] = a[n-1][n] / a[n-1][n-1]`, then loop upward and apply:
+   `x[i] = (a[i][n] - Σ a[i][j]*x[j]) / a[i][i]`.
+10. Print solution vector `x[i]` using a loop and formatted `print()` function.
+```
 
 ## Program:
 ``` python
